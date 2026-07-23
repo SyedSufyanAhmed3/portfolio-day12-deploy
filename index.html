@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayesha Khan — Frontend Developer Portfolio | Day 11</title>
+  <meta name="description" content="Interactive portfolio with smooth scrolling, scroll animations, and modern hover effects — Day 11 internship deliverable." />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- PAGE TRANSITION OVERLAY       -->
+  <!-- ============================= -->
+  <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+
+  <!-- ============================= -->
+  <!-- BACKGROUND DECORATION LAYERS  -->
+  <!-- ============================= -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- NAVIGATION                    -->
+  <!-- ============================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo nav-link-scroll">
+        <span class="logo-bracket">&lt;</span>Syed Sufyan<span class="logo-accent">.Dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link nav-link-scroll" data-section="home">Home</a>
+        <a href="#about" class="nav-link nav-link-scroll" data-section="about">About</a>
+        <a href="#skills" class="nav-link nav-link-scroll" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link nav-link-scroll" data-section="projects">Projects</a>
+        <a href="#contact" class="nav-link nav-link-scroll" data-section="contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta ripple-btn nav-link-scroll">Hire Me</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- HERO SECTION                                                  -->
+    <!-- ============================================================ -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <span class="eyebrow fade-in" style="--delay:0.1s"><i class="fa-solid fa-hand-sparkles"></i> Welcome to my portfolio</span>
+
+          <h1 class="hero-title fade-up" style="--delay:0.25s">
+            Hi, I'm <span class="text-gradient">SYED SUFYAN AHMED</span>
+          </h1>
+
+          <p class="hero-subtitle fade-up" style="--delay:0.4s">
+            <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+          </p>
+
+          <p class="hero-desc fade-up" style="--delay:0.55s">
+            I design and build responsive, accessible, and delightful web experiences —
+            turning ideas into fast, polished interfaces.
+          </p>
+
+          <div class="hero-actions fade-up" style="--delay:0.7s">
+            <a href="#projects" class="btn btn-primary ripple-btn nav-link-scroll">
+              <i class="fa-solid fa-diagram-project"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline ripple-btn nav-link-scroll">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-stats fade-up" style="--delay:0.85s">
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Commitment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual zoom-in" style="--delay:0.3s">
+          <div class="hero-image-frame floating">
+            <img src="assets/images/avatar-placeholder.png" alt="Illustrated avatar of Ayesha Khan, Frontend Developer" class="hero-image" />
+          </div>
+          <span class="orbit-badge badge-1"><i class="fa-brands fa-html5"></i></span>
+          <span class="orbit-badge badge-2"><i class="fa-brands fa-css3-alt"></i></span>
+          <span class="orbit-badge badge-3"><i class="fa-brands fa-js"></i></span>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-cue nav-link-scroll" aria-label="Scroll to About section">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT SECTION                                                 -->
+    <!-- ============================================================ -->
+    <section class="section about-section" id="about">
+      <div class="container">
+
+        <div class="section-heading fade-up">
+          <span class="eyebrow"><i class="fa-solid fa-user"></i> Get To Know Me</span>
+          <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+          <p class="section-subtitle">A little bit about my journey, values, and how I like to work.</p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-card glass-card fade-left">
+            <p class="about-text">
+              I'm a frontend developer currently interning and sharpening my craft one project
+              at a time. I care about clean markup, thoughtful interaction design, and interfaces
+              that feel fast and alive.
+            </p>
+            <p class="about-text">
+              Outside of code, I enjoy exploring new design trends, contributing to small open-source
+              tools, and mentoring beginners just starting their web development journey.
+            </p>
+
+            <ul class="about-facts">
+              <li><i class="fa-solid fa-graduation-cap"></i> Web Development Intern, 2026</li>
+              <li><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</li>
+              <li><i class="fa-solid fa-briefcase"></i> Open to Junior Frontend roles</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary ripple-btn nav-link-scroll">
+              <i class="fa-solid fa-paper-plane"></i> Let's Talk
+            </a>
+          </div>
+
+          <div class="about-progress-card glass-card fade-right">
+            <h3 class="progress-card-title">Core Strengths</h3>
+
+            <div class="mini-progress" data-percent="92">
+              <div class="mini-progress-head">
+                <span>HTML &amp; CSS</span>
+                <span class="mini-percent"><span class="count">0</span>%</span>
+              </div>
+              <div class="mini-track"><div class="mini-bar"></div></div>
+            </div>
+
+            <div class="mini-progress" data-percent="85">
+              <div class="mini-progress-head">
+                <span>JavaScript</span>
+                <span class="mini-percent"><span class="count">0</span>%</span>
+              </div>
+              <div class="mini-track"><div class="mini-bar"></div></div>
+            </div>
+
+            <div class="mini-progress" data-percent="80">
+              <div class="mini-progress-head">
+                <span>Responsive Design</span>
+                <span class="mini-percent"><span class="count">0</span>%</span>
+              </div>
+              <div class="mini-track"><div class="mini-bar"></div></div>
+            </div>
+
+            <div class="mini-progress" data-percent="75">
+              <div class="mini-progress-head">
+                <span>UI / UX Design</span>
+                <span class="mini-percent"><span class="count">0</span>%</span>
+              </div>
+              <div class="mini-track"><div class="mini-bar"></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SKILLS SECTION                                                -->
+    <!-- ============================================================ -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+
+        <div class="section-heading fade-up">
+          <span class="eyebrow"><i class="fa-solid fa-code"></i> What I Work With</span>
+          <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+          <p class="section-subtitle">Tools and technologies I reach for when building on the web.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card scale-in" style="--accent:#ff5f5f; --accent-2:#ff9966;">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <h3 class="skill-name">HTML5</h3>
+            <p class="skill-desc">Semantic, accessible markup for every screen.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#4fa3ff; --accent-2:#7c5cff;">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <h3 class="skill-name">CSS3</h3>
+            <p class="skill-desc">Grid, Flexbox, animation &amp; responsive layouts.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#f7d038; --accent-2:#ffb648;">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <h3 class="skill-name">JavaScript</h3>
+            <p class="skill-desc">Interactive, dynamic front-end behavior.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#9a5cff; --accent-2:#6f3bff;">
+            <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <h3 class="skill-name">Git &amp; GitHub</h3>
+            <p class="skill-desc">Version control &amp; team collaboration.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#3ddc97; --accent-2:#22b8cf;">
+            <div class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 class="skill-name">Responsive Design</h3>
+            <p class="skill-desc">Fluid layouts across every breakpoint.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#ff7ce5; --accent-2:#8a5cff;">
+            <div class="skill-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3 class="skill-name">UI / UX Design</h3>
+            <p class="skill-desc">Wireframes, hierarchy &amp; usability.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#5b8def; --accent-2:#4fa3ff;">
+            <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+            <h3 class="skill-name">Figma</h3>
+            <p class="skill-desc">Prototyping &amp; design handoff.</p>
+          </article>
+
+          <article class="skill-card scale-in" style="--accent:#ff8e53; --accent-2:#ff5f6d;">
+            <div class="skill-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3 class="skill-name">Performance</h3>
+            <p class="skill-desc">Fast-loading, optimized experiences.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PROJECTS SECTION                                              -->
+    <!-- ============================================================ -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-heading fade-up">
+          <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> My Work</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">A few recent builds — hover a card to take a closer look.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card fade-up">
+            <div class="project-thumb" style="--thumb-a:#6f3bff; --thumb-b:#4fa3ff;">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div class="project-overlay">
+                <a href="#" class="project-link" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" aria-label="View source code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">E-Commerce UI Concept</h3>
+              <p class="project-desc">A responsive storefront concept with cart interactions and product filtering.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-up" style="--delay:0.15s">
+            <div class="project-thumb" style="--thumb-a:#ff7ce5; --thumb-b:#6f3bff;">
+              <i class="fa-solid fa-list-check"></i>
+              <div class="project-overlay">
+                <a href="#" class="project-link" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" aria-label="View source code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Task Manager Dashboard</h3>
+              <p class="project-desc">A drag-and-drop task board with local storage persistence and filters.</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">LocalStorage</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-up" style="--delay:0.3s">
+            <div class="project-thumb" style="--thumb-a:#3ddc97; --thumb-b:#22b8cf;">
+              <i class="fa-solid fa-cloud-sun"></i>
+              <div class="project-overlay">
+                <a href="#" class="project-link" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-link" aria-label="View source code"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Weather Forecast App</h3>
+              <p class="project-desc">A clean weather lookup app consuming a public API with animated icons.</p>
+              <div class="project-tags">
+                <span class="tag">API</span>
+                <span class="tag">Fetch</span>
+                <span class="tag">CSS Animation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTACT SECTION                                               -->
+    <!-- ============================================================ -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading fade-up">
+          <span class="eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Let's Connect</span>
+          <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+          <p class="section-subtitle">Have a project in mind? Send a message and I'll reply within a day.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="form-card glass-card fade-left">
+            <form id="contactForm" class="contact-form" novalidate>
+
+              <div class="input-group">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input type="text" id="fullName" name="fullName" class="form-input" placeholder=" " autocomplete="name" />
+                <label for="fullName" class="form-label">Full Name</label>
+                <span class="error-msg" id="fullNameError"></span>
+              </div>
+
+              <div class="input-group">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="email" name="email" class="form-input" placeholder=" " autocomplete="email" />
+                <label for="email" class="form-label">Email Address</label>
+                <span class="error-msg" id="emailError"></span>
+              </div>
+
+              <div class="input-group">
+                <i class="fa-solid fa-tag input-icon"></i>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder=" " autocomplete="off" />
+                <label for="subject" class="form-label">Subject</label>
+                <span class="error-msg" id="subjectError"></span>
+              </div>
+
+              <div class="input-group input-group-textarea">
+                <i class="fa-solid fa-message input-icon input-icon-top"></i>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder=" " rows="5"></textarea>
+                <label for="message" class="form-label">Your Message</label>
+                <span class="error-msg" id="messageError"></span>
+                <span class="char-count" id="charCount">0 / 20 min characters</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-send ripple-btn" id="sendBtn">
+                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                <span class="btn-loader"></span>
+              </button>
+
+            </form>
+          </div>
+
+          <div class="contact-side">
+            <div class="info-card glass-card fade-right">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">syedsufyanahmed771@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="info-card glass-card fade-right" style="--delay:0.1s">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Karachi, Pakistan</span>
+              </div>
+            </div>
+
+            <div class="info-card glass-card fade-right" style="--delay:0.2s">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <span class="info-label">Response Time</span>
+                <span class="info-value">Within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="social-links fade-right" style="--delay:0.3s">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="mailto:hello.ayeshadev@example.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                        -->
+  <!-- ============================================================ -->
+  <footer class="footer fade-in">
+    <div class="container footer-inner">
+      <a href="#home" class="nav-logo nav-link-scroll">
+        <span class="logo-bracket">&lt;</span>Syed Sufyan<span class="logo-accent">.Dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="footer-links">
+        <a href="#home" class="nav-link-scroll">Home</a>
+        <a href="#about" class="nav-link-scroll">About</a>
+        <a href="#skills" class="nav-link-scroll">Skills</a>
+        <a href="#projects" class="nav-link-scroll">Projects</a>
+        <a href="#contact" class="nav-link-scroll">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      <p class="footer-copy">&copy; <span id="year"></span> Ayesha Khan. Built with HTML, CSS &amp; JavaScript — Day 11 Deliverable.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <div>
+      <strong>Message sent!</strong>
+      <span>Thanks for reaching out — I'll reply soon.</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
